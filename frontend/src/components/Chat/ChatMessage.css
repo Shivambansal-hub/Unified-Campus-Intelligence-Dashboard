@@ -1,0 +1,99 @@
+.chat-msg {
+  display: flex;
+  gap: var(--space-sm);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.chat-msg--user {
+  justify-content: flex-end;
+}
+
+.chat-msg--assistant {
+  justify-content: flex-start;
+}
+
+.chat-msg__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.2), hsla(170, 80%, 55%, 0.15));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.chat-msg__bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.chat-msg--user .chat-msg__bubble {
+  background: linear-gradient(135deg, var(--accent-primary), hsl(270, 85%, 55%));
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-msg--assistant .chat-msg__bubble {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-msg--error .chat-msg__bubble {
+  background: var(--color-error-bg);
+  border-color: hsla(0, 80%, 60%, 0.2);
+}
+
+.chat-msg__content {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.chat-msg__content strong {
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+.chat-msg--user .chat-msg__content strong {
+  color: white;
+}
+
+.chat-msg__sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.chat-msg__source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--badge-color) 15%, transparent);
+  color: var(--badge-color);
+  border: 1px solid color-mix(in srgb, var(--badge-color) 25%, transparent);
+}
+
+.chat-msg__time {
+  display: block;
+  font-size: 0.6rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  text-align: right;
+}
+
+.chat-msg--user .chat-msg__time {
+  color: rgba(255, 255, 255, 0.6);
+}

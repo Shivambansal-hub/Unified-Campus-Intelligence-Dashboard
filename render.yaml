@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mars-backend
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "bash backend/start.sh"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: GEMINI_API_KEY
+        sync: false

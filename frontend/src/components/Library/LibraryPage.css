@@ -1,0 +1,219 @@
+.library-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.library-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.library-page__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.library-page__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.library-page__stats-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-md) var(--space-xl);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.library-page__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.library-page__stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.library-page__stat-num--green {
+  color: var(--color-success);
+}
+
+.library-page__stat-num--red {
+  color: var(--color-error);
+}
+
+.library-page__stat-lbl {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.library-page__stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--glass-border);
+}
+
+/* Controls */
+.library-page__controls {
+  margin-bottom: var(--space-xl);
+}
+
+.library-page__search-wrapper {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.library-page__search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+
+.library-page__search {
+  padding-left: 44px;
+}
+
+.library-page__filters {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.library-page__filter-chip {
+  padding: 6px 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.library-page__filter-chip:hover {
+  background: var(--glass-bg-hover);
+  color: var(--text-primary);
+}
+
+.library-page__filter-chip--active {
+  background: hsla(250, 90%, 65%, 0.15);
+  border-color: hsla(250, 90%, 65%, 0.3);
+  color: var(--accent-primary);
+}
+
+/* Book Grid */
+.library-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-md);
+}
+
+.library-page__book {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+.library-page__book-cover {
+  width: 56px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.library-page__book-cover-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.library-page__book-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.library-page__book-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.library-page__book-author {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.library-page__book-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.library-page__book-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.library-page__book-shelf {
+  font-size: 0.7rem;
+  color: var(--accent-secondary);
+  font-weight: 500;
+}
+
+.library-page__book-isbn {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+/* Skeleton */
+.library-page__skeleton {
+  height: 120px;
+  background: linear-gradient(90deg, var(--glass-bg) 0%, var(--glass-bg-hover) 50%, var(--glass-bg) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Empty */
+.library-page__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+}
+
+.library-page__empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-md);
+}

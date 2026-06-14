@@ -1,0 +1,384 @@
+.academics-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.academics-page__header {
+  margin-bottom: var(--space-xl);
+}
+
+.academics-page__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.academics-page__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Tabs */
+.academics-page__tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.academics-page__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.academics-page__tab:hover {
+  background: var(--glass-bg-hover);
+  color: var(--text-primary);
+}
+
+.academics-page__tab--active {
+  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.15), hsla(170, 80%, 55%, 0.1));
+  border-color: hsla(250, 90%, 65%, 0.3);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.academics-page__tab-count {
+  padding: 1px 8px;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Department Filters */
+.academics-page__dept-filters {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.academics-page__dept-chip {
+  padding: 6px 14px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.academics-page__dept-chip:hover {
+  background: var(--glass-bg-hover);
+  color: var(--text-primary);
+}
+
+.academics-page__dept-chip--active {
+  background: hsla(250, 90%, 65%, 0.15);
+  border-color: hsla(250, 90%, 65%, 0.3);
+  color: var(--accent-primary);
+}
+
+/* Courses */
+.academics-page__courses {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.academics-page__course {
+  padding: 0;
+  overflow: hidden;
+}
+
+.academics-page__course-main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.academics-page__course-code {
+  padding: 8px 14px;
+  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.15), hsla(250, 90%, 65%, 0.05));
+  border: 1px solid hsla(250, 90%, 65%, 0.2);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.academics-page__course-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.academics-page__course-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.academics-page__course-instructor {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.academics-page__course-expand {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  transition: transform var(--transition-fast);
+}
+
+.academics-page__course-details {
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 0;
+  padding-top: var(--space-md);
+}
+
+.academics-page__course-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.academics-page__course-prereqs {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.academics-page__course-prereqs strong {
+  color: var(--color-warning);
+}
+
+.academics-page__course-schedule h4 {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-sm);
+}
+
+.academics-page__schedule-slot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  transition: background var(--transition-fast);
+}
+
+.academics-page__schedule-slot:hover {
+  background: var(--glass-bg-hover);
+}
+
+.academics-page__schedule-day {
+  min-width: 80px;
+  font-weight: 600;
+  color: var(--accent-secondary);
+}
+
+.academics-page__schedule-time {
+  min-width: 160px;
+  color: var(--text-secondary);
+}
+
+.academics-page__schedule-room {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* Deadlines */
+.academics-page__deadlines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.academics-page__deadline {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.academics-page__deadline-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.academics-page__deadline-countdown--error {
+  background: var(--color-error-bg);
+  border: 1px solid hsla(0, 80%, 60%, 0.2);
+}
+
+.academics-page__deadline-countdown--warning {
+  background: var(--color-warning-bg);
+  border: 1px solid hsla(40, 95%, 60%, 0.2);
+}
+
+.academics-page__deadline-countdown--info {
+  background: var(--color-info-bg);
+  border: 1px solid hsla(210, 90%, 60%, 0.2);
+}
+
+.academics-page__deadline-countdown--success {
+  background: var(--color-success-bg);
+  border: 1px solid hsla(150, 70%, 50%, 0.2);
+}
+
+.academics-page__deadline-days {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.academics-page__deadline-countdown--error .academics-page__deadline-days { color: var(--color-error); }
+.academics-page__deadline-countdown--warning .academics-page__deadline-days { color: var(--color-warning); }
+.academics-page__deadline-countdown--info .academics-page__deadline-days { color: var(--color-info); }
+.academics-page__deadline-countdown--success .academics-page__deadline-days { color: var(--color-success); }
+
+.academics-page__deadline-days-label {
+  font-size: 0.6rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.academics-page__deadline-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.academics-page__deadline-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 4px;
+}
+
+.academics-page__deadline-code {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+}
+
+.academics-page__deadline-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.academics-page__deadline-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.academics-page__deadline-date {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* Resources */
+.academics-page__resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-md);
+}
+
+.academics-page__resource {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.academics-page__resource:hover {
+  border-color: var(--accent-primary);
+}
+
+.academics-page__resource-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.academics-page__resource-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.academics-page__resource-info h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.academics-page__resource-info p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.academics-page__resource-dept {
+  display: inline-block;
+  font-size: 0.65rem;
+  color: var(--accent-secondary);
+  margin-top: 4px;
+}
+
+.academics-page__resource-arrow {
+  font-size: 1.2rem;
+  color: var(--text-tertiary);
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.academics-page__resource:hover .academics-page__resource-arrow {
+  transform: translateX(4px);
+  color: var(--accent-primary);
+}
+
+/* Skeleton & Empty */
+.academics-page__skeleton {
+  height: 80px;
+  background: linear-gradient(90deg, var(--glass-bg) 0%, var(--glass-bg-hover) 50%, var(--glass-bg) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.academics-page__empty {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}

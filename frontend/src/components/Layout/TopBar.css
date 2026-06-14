@@ -1,0 +1,89 @@
+.topbar {
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.topbar__greeting {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.topbar__date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.topbar__chat-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.15), hsla(170, 80%, 55%, 0.1));
+  border: 1px solid hsla(250, 90%, 65%, 0.25);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.topbar__chat-toggle:hover {
+  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.25), hsla(170, 80%, 55%, 0.15));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--accent-primary-glow);
+}
+
+.topbar__chat-toggle--active {
+  background: linear-gradient(135deg, var(--accent-primary), hsl(270, 85%, 55%));
+  border-color: transparent;
+  color: white;
+}
+
+.topbar__chat-icon {
+  font-size: 1.1rem;
+}
+
+.topbar__chat-badge {
+  padding: 2px 8px;
+  background: var(--accent-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  color: white;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.topbar__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.topbar__avatar:hover {
+  transform: scale(1.1);
+}

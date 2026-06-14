@@ -1,0 +1,239 @@
+.cafeteria-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cafeteria-page__header {
+  margin-bottom: var(--space-xl);
+}
+
+.cafeteria-page__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.cafeteria-page__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Specials */
+.cafeteria-page__specials {
+  margin-bottom: var(--space-xl);
+}
+
+.cafeteria-page__specials-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.cafeteria-page__specials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.cafeteria-page__special-card {
+  padding: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsla(40, 95%, 60%, 0.08), hsla(40, 95%, 60%, 0.02));
+  border-color: hsla(40, 95%, 60%, 0.2);
+}
+
+.cafeteria-page__special-card:hover {
+  border-color: hsla(40, 95%, 60%, 0.4);
+  box-shadow: 0 4px 20px hsla(40, 95%, 60%, 0.1);
+}
+
+.cafeteria-page__special-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  background: hsla(40, 95%, 60%, 0.15);
+  color: var(--color-warning);
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.cafeteria-page__special-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cafeteria-page__special-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.cafeteria-page__special-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 4px;
+}
+
+.cafeteria-page__special-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-warning);
+}
+
+.cafeteria-page__special-timing {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-transform: capitalize;
+}
+
+/* Tabs */
+.cafeteria-page__tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cafeteria-page__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cafeteria-page__tab:hover {
+  background: var(--glass-bg-hover);
+  color: var(--text-primary);
+}
+
+.cafeteria-page__tab--active {
+  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.15), hsla(170, 80%, 55%, 0.1));
+  border-color: hsla(250, 90%, 65%, 0.3);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.cafeteria-page__tab-icon {
+  font-size: 1.1rem;
+}
+
+.cafeteria-page__tab-time {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  background: var(--glass-bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* Menu Items */
+.cafeteria-page__menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cafeteria-page__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.cafeteria-page__item-indicator {
+  width: 4px;
+  height: 40px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.cafeteria-page__item-indicator--veg {
+  background: hsl(120, 60%, 45%);
+}
+
+.cafeteria-page__item-indicator--nonveg {
+  background: hsl(0, 70%, 50%);
+}
+
+.cafeteria-page__item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cafeteria-page__item-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cafeteria-page__item-star {
+  font-size: 0.8rem;
+}
+
+.cafeteria-page__item-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.cafeteria-page__item-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.cafeteria-page__item-cal {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+}
+
+.cafeteria-page__item-allergens {
+  font-size: 0.65rem;
+  color: var(--color-warning);
+}
+
+.cafeteria-page__item-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-secondary);
+  flex-shrink: 0;
+}
+
+/* Skeleton */
+.cafeteria-page__skeleton {
+  height: 72px;
+  background: linear-gradient(90deg, var(--glass-bg) 0%, var(--glass-bg-hover) 50%, var(--glass-bg) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Empty */
+.cafeteria-page__empty {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+}
+
+.cafeteria-page__empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-md);
+}
