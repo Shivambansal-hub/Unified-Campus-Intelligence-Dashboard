@@ -1,33 +1,31 @@
 #!/bin/bash
 # start.sh - Launch script for Render deployment
 # This script runs all 4 MCP servers in the background, and the Gateway in the foreground.
+set -e
 
-# Ensure we are executing from the backend directory
-cd "$(dirname "$0")"
+# Get the absolute path of this script's directory (backend/)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "Starting Library MCP Server on port 8001..."
-cd mcp_library
+cd "$SCRIPT_DIR/mcp_library"
 python3 -m uvicorn main:app --host 127.0.0.1 --port 8001 &
-cd ..
 
 echo "Starting Cafeteria MCP Server on port 8002..."
-cd mcp_cafeteria
+cd "$SCRIPT_DIR/mcp_cafeteria"
 python3 -m uvicorn main:app --host 127.0.0.1 --port 8002 &
-cd ..
 
 echo "Starting Events MCP Server on port 8003..."
-cd mcp_events
+cd "$SCRIPT_DIR/mcp_events"
 python3 -m uvicorn main:app --host 127.0.0.1 --port 8003 &
-cd ..
 
 echo "Starting Academics MCP Server on port 8004..."
-cd mcp_academics
+cd "$SCRIPT_DIR/mcp_academics"
 python3 -m uvicorn main:app --host 127.0.0.1 --port 8004 &
-cd ..
+
+# Give MCP servers a moment to boot before starting the gateway
+sleep 2
 
 echo "Starting API Gateway on port ${PORT:-8000}..."
-cd gateway
-# Render dynamically assigns a port via the $PORT environment variable.
-# We fallback to 8000 for local testing.
+cd "$SCRIPT_DIR/gateway"
 PORT=${PORT:-8000}
-python3 -m uvicorn main:app --host 0.0.0.0 --port $PORT
+exec python3 -m uvicorn main:app --host 0.0.0.0 --port "$PORT"

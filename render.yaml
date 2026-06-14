@@ -1,7 +1,7 @@
 services:
   - type: web
     name: mars-backend
-    env: python
+    runtime: python
     buildCommand: "pip install -r backend/requirements.txt"
     startCommand: "bash backend/start.sh"
     envVars:
