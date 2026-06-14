@@ -23,8 +23,8 @@ import httpx
 from typing import Dict, Any
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file (won't override system env vars)
+load_dotenv(override=False)
 
 logger = logging.getLogger(__name__)
 
