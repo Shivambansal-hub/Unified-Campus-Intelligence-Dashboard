@@ -1,9 +1,7 @@
 .chat-input {
   padding: var(--space-md);
   border-top: 1px solid var(--glass-border);
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--bg-surface);
 }
 
 .chat-input__wrapper {
@@ -46,7 +44,7 @@
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-primary), hsl(270, 85%, 55%));
+  background: linear-gradient(135deg, var(--accent-primary), hsl(260, 70%, 55%));
   color: white;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -55,7 +53,7 @@
 
 .chat-input__send:hover:not(:disabled) {
   transform: scale(1.05);
-  box-shadow: 0 4px 16px var(--accent-primary-glow);
+  box-shadow: 0 4px 14px var(--accent-primary-glow);
 }
 
 .chat-input__send:disabled {

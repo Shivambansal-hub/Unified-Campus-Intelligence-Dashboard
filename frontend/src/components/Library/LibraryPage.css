@@ -107,7 +107,7 @@
 }
 
 .library-page__filter-chip:hover {
-  background: var(--glass-bg-hover);
+  background: var(--bg-surface-hover);
   color: var(--text-primary);
 }
 
@@ -199,7 +199,7 @@
 /* Skeleton */
 .library-page__skeleton {
   height: 120px;
-  background: linear-gradient(90deg, var(--glass-bg) 0%, var(--glass-bg-hover) 50%, var(--glass-bg) 100%);
+  background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--bg-surface-hover) 50%, var(--bg-secondary) 100%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

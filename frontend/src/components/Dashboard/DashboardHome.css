@@ -7,8 +7,8 @@
 .dashboard__banner {
   position: relative;
   padding: var(--space-2xl);
-  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.12), hsla(170, 80%, 55%, 0.08));
-  border: 1px solid hsla(250, 90%, 65%, 0.15);
+  background: linear-gradient(135deg, hsla(240, 75%, 60%, 0.08), hsla(170, 65%, 45%, 0.06));
+  border: 1px solid hsla(240, 75%, 60%, 0.12);
   border-radius: var(--radius-xl);
   overflow: hidden;
   margin-bottom: var(--space-xl);
@@ -112,7 +112,7 @@
 .dashboard__stat-card:hover {
   border-color: var(--card-accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--card-accent) 20%, transparent);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--card-accent) 12%, transparent);
 }
 
 .dashboard__stat-icon {
@@ -190,7 +190,7 @@
 }
 
 .dashboard__event-item:hover {
-  background: var(--glass-bg-hover);
+  background: var(--bg-surface-hover);
 }
 
 .dashboard__event-date {
@@ -246,7 +246,7 @@
 }
 
 .dashboard__deadline-item:hover {
-  background: var(--glass-bg-hover);
+  background: var(--bg-surface-hover);
 }
 
 .dashboard__deadline-urgency {
@@ -323,7 +323,7 @@
 }
 
 .dashboard__action-btn:hover {
-  background: var(--glass-bg-hover);
+  background: var(--bg-surface-hover);
   border-color: var(--accent-primary);
   transform: translateY(-2px);
 }
@@ -347,7 +347,7 @@
 
 .dashboard__skeleton-item {
   height: 50px;
-  background: linear-gradient(90deg, var(--glass-bg) 0%, var(--glass-bg-hover) 50%, var(--glass-bg) 100%);
+  background: linear-gradient(90deg, var(--bg-secondary) 0%, var(--bg-surface-hover) 50%, var(--bg-secondary) 100%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius-sm);

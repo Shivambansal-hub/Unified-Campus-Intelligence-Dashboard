@@ -1,7 +1,7 @@
 .chat-panel {
   width: 0;
   height: 100%;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border-left: 1px solid var(--glass-border);
   display: flex;
   flex-direction: column;
@@ -20,9 +20,8 @@
   justify-content: space-between;
   padding: var(--space-md) var(--space-lg);
   border-bottom: 1px solid var(--glass-border);
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
   min-height: 64px;
 }
 
@@ -39,9 +38,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.2), hsla(170, 80%, 55%, 0.15));
+  background: hsla(240, 75%, 60%, 0.1);
   border-radius: var(--radius-md);
-  border: 1px solid hsla(250, 90%, 65%, 0.2);
+  border: 1px solid hsla(240, 75%, 60%, 0.15);
 }
 
 .chat-panel__title {
@@ -66,7 +65,7 @@
   height: 6px;
   border-radius: 50%;
   background: var(--color-success);
-  box-shadow: 0 0 6px hsla(150, 70%, 50%, 0.5);
+  box-shadow: 0 0 6px hsla(152, 60%, 42%, 0.4);
 }
 
 .chat-panel__close {
@@ -85,7 +84,7 @@
 }
 
 .chat-panel__close:hover {
-  background: var(--glass-bg-hover);
+  background: var(--bg-surface-hover);
   color: var(--text-primary);
 }
 
@@ -153,7 +152,7 @@
 
 .chat-panel__suggestion-chip {
   padding: 6px 12px;
-  background: var(--glass-bg);
+  background: var(--bg-surface);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-full);
   color: var(--text-secondary);
@@ -165,8 +164,8 @@
 }
 
 .chat-panel__suggestion-chip:hover {
-  background: hsla(250, 90%, 65%, 0.1);
-  border-color: hsla(250, 90%, 65%, 0.3);
+  background: hsla(240, 75%, 60%, 0.08);
+  border-color: hsla(240, 75%, 60%, 0.25);
   color: var(--accent-primary);
   transform: translateY(-1px);
 }

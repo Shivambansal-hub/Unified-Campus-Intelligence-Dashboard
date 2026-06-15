@@ -4,10 +4,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--space-xl);
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--bg-surface);
   border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .topbar__greeting {
@@ -33,10 +32,10 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.15), hsla(170, 80%, 55%, 0.1));
-  border: 1px solid hsla(250, 90%, 65%, 0.25);
+  background: hsla(240, 75%, 60%, 0.08);
+  border: 1px solid hsla(240, 75%, 60%, 0.18);
   border-radius: var(--radius-full);
-  color: var(--text-primary);
+  color: var(--accent-primary);
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;
@@ -45,13 +44,13 @@
 }
 
 .topbar__chat-toggle:hover {
-  background: linear-gradient(135deg, hsla(250, 90%, 65%, 0.25), hsla(170, 80%, 55%, 0.15));
+  background: hsla(240, 75%, 60%, 0.14);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px var(--accent-primary-glow);
+  box-shadow: 0 4px 12px var(--accent-primary-glow);
 }
 
 .topbar__chat-toggle--active {
-  background: linear-gradient(135deg, var(--accent-primary), hsl(270, 85%, 55%));
+  background: linear-gradient(135deg, var(--accent-primary), hsl(260, 70%, 55%));
   border-color: transparent;
   color: white;
 }

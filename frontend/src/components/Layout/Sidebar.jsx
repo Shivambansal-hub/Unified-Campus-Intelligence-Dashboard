@@ -17,7 +17,7 @@ export default function Sidebar() {
     <aside className={`sidebar ${collapsed ? 'sidebar--collapsed' : ''}`}>
       <div className="sidebar__header">
         <div className="sidebar__logo">
-          <span className="sidebar__logo-icon">🚀</span>
+          <span className="sidebar__logo-icon">◈</span>
           {!collapsed && <span className="sidebar__logo-text">MARS</span>}
         </div>
         <button

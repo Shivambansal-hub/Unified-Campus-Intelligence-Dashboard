@@ -39,9 +39,10 @@
 }
 
 .chat-msg--assistant .chat-msg__bubble {
-  background: var(--glass-bg);
+  background: var(--bg-surface);
   border: 1px solid var(--glass-border);
   border-bottom-left-radius: 4px;
+  box-shadow: var(--shadow-sm);
 }
 
 .chat-msg--error .chat-msg__bubble {
@@ -57,7 +58,7 @@
 
 .chat-msg__content strong {
   font-weight: 700;
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
 }
 
 .chat-msg--user .chat-msg__content strong {
