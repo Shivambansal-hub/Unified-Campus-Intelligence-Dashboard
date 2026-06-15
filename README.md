@@ -16,7 +16,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 - **📚 Library** — Search books, check availability, view stats
 - **🍽️ Cafeteria** — Today's menu, weekly meals, daily specials
@@ -27,7 +27,7 @@
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The application follows a **microservices architecture** where each campus domain runs as an independent MCP server. The API Gateway routes user queries to the relevant server(s) and uses Google Gemini to format intelligent responses.
 
@@ -130,8 +130,6 @@ Mars_prject_2026/
 
 ---
 
-## 🚀 Getting Started
-
 ### Prerequisites
 
 - **Node.js** 18+ and npm
@@ -179,32 +177,11 @@ The frontend will be available at **http://localhost:5173**.
 
 ---
 
-## 🌐 Deployment
+### Direct access to my product
+ I have deployed it using vercel and render
+ Link - **https://unified-campus-intelligence-dashboard-kulbz99ab.vercel.app**
 
-### Backend → Render (Free Tier)
-
-1. Push your code to GitHub.
-2. Create a new **Web Service** on [Render](https://render.com).
-3. Set:
-   - **Root Directory:** `backend`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `bash start.sh`
-4. Add environment variables:
-   - `PYTHON_VERSION` = `3.11.0`
-   - `GEMINI_API_KEY` = your API key
-
-### Frontend → Vercel (Free Tier)
-
-1. Import the same GitHub repo on [Vercel](https://vercel.com).
-2. Set:
-   - **Root Directory:** `frontend`
-   - **Framework Preset:** Vite
-3. Add environment variable:
-   - `VITE_API_URL` = your Render backend URL (e.g., `https://your-app.onrender.com`)
-
----
-
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Gateway (port 8000)
 
@@ -238,15 +215,3 @@ The frontend will be available at **http://localhost:5173**.
 | AI | Google Gemini 1.5 Flash |
 | HTTP Client | httpx (backend), fetch (frontend) |
 | Deployment | Vercel (frontend), Render (backend) |
-
----
-
-## 👤 Author
-
-**Shivam Bansal**
-
----
-
-## 📄 License
-
-This project is for educational purposes. Feel free to use and modify.
